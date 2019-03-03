@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Watchtower",
+  "name": "Purely browser based, point in time service health monitor",
   "icons": [
     {
       "src": "favicon.ico",

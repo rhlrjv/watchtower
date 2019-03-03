@@ -1,0 +1,26 @@
+.service-tile {
+    height: 200px;
+    width: calc(30vmax + 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    margin: 20px;
+    background: grey;
+    color: white;
+    border-radius: 4px;
+}
+
+.service-tile--healthy {
+    background: #2e9a1d;
+}
+
+.service-tile--unhealthy {
+    background: #c33434;
+}
+
+.service__name {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px ;
+}
