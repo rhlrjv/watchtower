@@ -1,5 +1,6 @@
 {
-  "title": "Gringotts Watchtower",
+  "title": "Watchtower",
+  /*"pollingIntervalInMins": 5,*/
   "services": [
     {
       "name": "Service 1",

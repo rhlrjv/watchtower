@@ -11,7 +11,9 @@ const Monitor = ({config}) => {
       <div className="monitor__details">
       </div>
       <div className="monitor__services">
-        {config.services.map((service,index) => <ServiceTile key={index} details={service}/>)}
+        {config.services.map((service, index) => (
+          <ServiceTile key={index} details={service} pollingInterval={config.pollingIntervalInMins}/>)
+        )}
       </div>
     </div>
   )

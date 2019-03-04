@@ -3,7 +3,8 @@ import './App.css'
 import Monitor from './Monitor/Monitor'
 
 const DEFAULT_CONFIG = {
-  "title": "Default Config",
+  "title": "Default title",
+  "pollingIntervalInMins": 5,
   "services": []
 }
 
@@ -13,7 +14,7 @@ const App = ({configPath}) => {
   useEffect(() => {
     fetch(configPath)
       .then(res => res.json())
-      .then(response => setConfig(response))
+      .then(response => setConfig({...DEFAULT_CONFIG, ...response}))
   }, configPath)
 
   return (

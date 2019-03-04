@@ -6,9 +6,8 @@ const STATUS = {
   healthy: "HEALTHY",
   unhealthy: "UNHEALTHY"
 }
-const INTERVAL = 5 * 60 * 1000
 
-const ServiceTile = ({details}) => {
+const ServiceTile = ({details, pollingInterval}) => {
   const [status, setStatus] = useState(STATUS.unknown)
 
   function refreshServiceStatus() {
@@ -33,7 +32,7 @@ const ServiceTile = ({details}) => {
 
     const interval = window.setInterval(() => {
       refreshServiceStatus()
-    }, INTERVAL)
+    }, pollingInterval * 60 * 1000)
 
     return () => window.clearInterval(interval)
   }, [details])

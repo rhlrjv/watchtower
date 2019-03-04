@@ -1,7 +1,7 @@
 # Watchtower
 **Simple in-browser service health monitor**
 
-The service health is polled every 5 minutes to check if it is still alive
+Each service is polled to check if it is still alive
 
 ## Configuration
 The app depends on an external `config.json` file to detail the different services to be monitored. It has the following structure
@@ -9,6 +9,7 @@ The app depends on an external `config.json` file to detail the different servic
 ```
 {
   "title": "My Watchtower",
+  "pollingIntervalInMins": 15,
   "services": [
     {
       "name": "Service 1",
