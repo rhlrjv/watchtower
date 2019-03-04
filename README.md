@@ -1,10 +1,12 @@
 # Watchtower
 **Simple in-browser service health monitor**
 
-Each service is polled to check if it is still alive
+Each service is polled to check if it is still alive. 
+
+![screenshot](screenshot.png)
 
 ## Configuration
-The app depends on an external `config.json` file to detail the different services to be monitored. It has the following structure
+The app depends on an external `public/config.json` file to detail the different services to be monitored. It has the following structure.
 
 ```
 {
