@@ -1,46 +1,26 @@
-import React, {Component} from 'react'
+import React, {useState, useEffect} from 'react'
 import './App.css'
 import Monitor from './Monitor/Monitor'
 
-const CONFIG = {
-  "title": "Watchtower",
-  "services": [
-    {
-      "name": "Service 1",
-      "url": "https://example.com",
-      "method": "GET"
-    },
-    {
-      "name": "Service 2",
-      "url": "https://invalid.com",
-      "method": "GET"
-    },
-    {
-      "name": "Service 3",
-      "url": "https://example.com",
-      "method": "GET"
-    },
-    {
-      "name": "Service 4",
-      "url": "https://example.com",
-      "method": "GET"
-    },
-    {
-      "name": "Service 5",
-      "url": "https://example.com",
-      "method": "GET"
-    }
-  ]
+const DEFAULT_CONFIG = {
+  "title": "Default Config",
+  "services": []
 }
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Monitor config={CONFIG}/>
-      </div>
-    )
-  }
+const App = ({configPath}) => {
+  const [config, setConfig] = useState(DEFAULT_CONFIG)
+
+  useEffect(() => {
+    fetch(configPath)
+      .then(res => res.json())
+      .then(response => setConfig(response))
+  }, configPath)
+
+  return (
+    <div className="App">
+      <Monitor config={config}/>
+    </div>
+  )
 }
 
 export default App
