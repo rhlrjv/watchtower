@@ -7,23 +7,28 @@ const CONFIG = {
   "services": [
     {
       "name": "Service 1",
-      "url": "https://example.com"
+      "url": "https://example.com",
+      "method": "GET"
     },
     {
       "name": "Service 2",
-      "url": "https://example.com"
+      "url": "https://invalid.com",
+      "method": "GET"
     },
     {
       "name": "Service 3",
-      "url": "https://example.com"
+      "url": "https://example.com",
+      "method": "GET"
     },
     {
       "name": "Service 4",
-      "url": "https://example.com"
+      "url": "https://example.com",
+      "method": "GET"
     },
     {
       "name": "Service 5",
-      "url": "https://example.com"
+      "url": "https://example.com",
+      "method": "GET"
     }
   ]
 }
